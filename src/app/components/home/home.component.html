@@ -1,0 +1,41 @@
+<section class="home-section c-height">
+  <mat-card class="home-card">
+    <h2>Kredyt dla twojej firmy</h2>
+    <h3>Wypelnij formularz - skontaktujemy się z Tobą</h3>
+    <form #f="ngForm">
+      <div class="form-group">
+        <label>Imię *</label>
+        <input [(ngModel)]="this.leadForm.name" [ngClass]="!isNameFieldValid() && 'c-warningMessage'"
+               name="name" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+      </div>
+
+      <div class="form-group">
+        <label>NIP</label>
+        <input [(ngModel)]="this.leadForm.taxId"
+               name="taxId" type="text" class="form-control" placeholder="NIP firmy">
+      </div>
+
+      <div class="form-group">
+        <label>Telefon * </label>
+        <input [(ngModel)]="this.leadForm.phone" [ngClass]="!isPhoneFieldValid() && 'c-warningMessage'"
+               name="phone" type="text" class="form-control" placeholder="Telefon" required>
+      </div>
+
+      <div class="form-group">
+        <label>E-mail *</label>
+        <input [(ngModel)]="this.leadForm.mail" [ngClass]="!isMailFieldValid() && 'c-warningMessage'"
+               name="mail" type="email" class="form-control" placeholder="e-mail" required>
+      </div>
+    </form>
+
+    <div class="mat-action-row" style="margin-top: 12px; display: flex; justify-content: center">
+      <button mat-flat-button color="accent" [ngClass]="!isFormValid() && 'c-warningMessage-button'"
+              (click)="saveLead()" [disabled]="!isFormValid() ">Skontaktuj sie z nami !
+      </button>
+    </div>
+    <h3>Dzięujemy!</h3>
+    <small> * Pola oznaczone gwiazdką są obowiązkowe</small>
+  </mat-card>
+
+
+</section>

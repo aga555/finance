@@ -1,0 +1,69 @@
+.home-section {
+  background-image: url("http://www.rkca.pl/images/pl/webpage_1/kzzhnk99/element_160/warsaw-996626_1920.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+}
+
+h2 {
+  color: #ffd740;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.home-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.home-card {
+  width: 400px;
+  margin: auto;
+  background: rgba(13, 25, 38, 255);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .home-card {
+    width: 300px;
+  }
+}
+
+.home-full-width {
+  width: 100%;
+  background-color: white;
+}
+
+.home-half-width {
+  width: 50%;
+  background-color: white;
+}
+
+small {
+  color: #ffd740;
+  font-size: x-small;
+}
+
+label {
+  color: #ffd740;
+  margin-top: 10px;
+}
+
+.c-warningMessage-button {
+  background-color: rgb(235, 235, 228) !important;
+}
+
+.c-warningMessage {
+  color: red;
+}
